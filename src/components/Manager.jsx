@@ -24,10 +24,10 @@ const Manager = () => {
 
   const savePassword = () => {
 
-    // if (!form.site || !form.username || !form.password) {
-    //   notify("Please fill in all fields!");
-    //   return;
-    // }
+    if (!form.site || !form.username || !form.password) {
+      notify("Please fill in all fields!");
+      return;
+    }
 
 
 
