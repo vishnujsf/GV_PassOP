@@ -24,11 +24,11 @@ const Manager = () => {
 
   const savePassword = () => {
 
-    if (!form.site || !form.username || !form.password) {
-      notify("Please fill in all fields!");
+    if (!form.site.trim() || !form.username.trim() || !form.password.trim()) {
+      notify("⚠️ All fields are required! Please fill in site, username, and password.");
       return;
     }
-
+    
 
 
     setpasswordArray([...passwordArray, {...form,id:uuidv4()}]);
