@@ -44,7 +44,7 @@ const Manager = () => {
     if(c){ 
       setpasswordArray(passwordArray.filter(item=>item.id!==id))
       localStorage.setItem("passwords",JSON.stringify(passwordArray.filter(item=>item.id!==id)))
-      
+      notify("Password Deleted Successfully!");
     }
     
  
@@ -53,7 +53,8 @@ const Manager = () => {
   const editPassword = (id) => {
     console.log("Editing password with id",id)
     setform(passwordArray.filter(i=>i.id===id)[0])
-    setpasswordArray(passwordArray.filter(item=>item.id!==id)) 
+    setpasswordArray(passwordArray.filter(item=>item.id!==id))
+    notify("Password Deleted Successfully!"); 
     };
 
 
@@ -66,6 +67,8 @@ const Manager = () => {
     navigator.clipboard.writeText(text);
     notify("Text copied to Clipboard!")
   };
+
+  <ToastContainer position="top-right" autoClose={2000} />
 
   return (
     <>
@@ -221,7 +224,7 @@ const Manager = () => {
                                 src="https://cdn.lordicon.com/iykgtsbt.json"
                                 trigger="hover"
                               ></lord-icon>
-                              <ToastContainer />
+                              {/* <ToastContainer /> */}
                             </div>
                           </div>
                         </div>
