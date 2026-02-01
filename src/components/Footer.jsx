@@ -9,7 +9,7 @@ const Footer = () => {
             GV
             <span className='text-green-500'>PassOp /&gt;</span>
         </div>
-        <h5 className='text-sm'>Created by VishnuJSF</h5>
+        <h5 className='text-sm'>Created by Gowthami</h5>
       
     </div>
 
